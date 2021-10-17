@@ -52,4 +52,14 @@ public class NumeralConverterTest {
         NumeralConverter numeralConverter = new NumeralConverter();
         Assertions.assertEquals(numeralConverter.convertToInteger("IV"),4);
     }
+    @Test
+    public void convert_XIV_To14Test(){
+        NumeralConverter numeralConverter = new NumeralConverter();
+        Assertions.assertEquals(numeralConverter.convertToInteger("XIV"),14);
+    }
+    @Test
+    public void convert_MMCMXCIX_To2999Test(){
+        NumeralConverter numeralConverter = new NumeralConverter();
+        Assertions.assertEquals(numeralConverter.convertToInteger("MMCMXCIX"),2999);
+    }
 }
