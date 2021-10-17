@@ -3,8 +3,13 @@ import org.junit.jupiter.api.Test;
 
 public class NumeralConverterTest {
     @Test
-    public void convertIToOneTest(){
+    public void convert_I_ToOneTest(){
         NumeralConverter numeralConverter = new NumeralConverter();
         Assertions.assertEquals(numeralConverter.convertToInteger("I"),1);
+    }
+    @Test
+    public void convert_II_ToTwoTest(){
+        NumeralConverter numeralConverter = new NumeralConverter();
+        Assertions.assertEquals(numeralConverter.convertToInteger("II"),2);
     }
 }
