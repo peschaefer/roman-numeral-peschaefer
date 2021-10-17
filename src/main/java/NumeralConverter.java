@@ -1,7 +1,7 @@
 public class NumeralConverter {
 
     public int convertToInteger(String romanNumeral) {
-        if(!checkForRepeatedCharacters(romanNumeral)){
+        if(checkForRepeatedCharacters(romanNumeral)){
             return 0;
         }
         int total = 0;
@@ -48,23 +48,23 @@ public class NumeralConverter {
 
     private boolean checkForRepeatedCharacters(String romanNumeral){
         if(romanNumeral.contains("IIII")){
-            return false;
+            return true;
         }
         if(romanNumeral.contains("VV")){
-            return false;
+            return true;
         }
         if(romanNumeral.contains("XXXX")){
-            return false;
+            return true;
         }
         if(romanNumeral.contains("LL")){
-            return false;
+            return true;
         }
         if(romanNumeral.contains("CCCC")){
-            return false;
+            return true;
         }
         if(romanNumeral.contains("DD")){
-            return false;
+            return true;
         }
-        return !romanNumeral.contains("MMMM");
+        return romanNumeral.contains("MMMM");
     }
 }
