@@ -22,4 +22,9 @@ public class NumeralConverterTest {
         NumeralConverter numeralConverter = new NumeralConverter();
         Assertions.assertEquals(numeralConverter.convertToInteger("X"),10);
     }
+    @Test
+    public void convert_L_ToFiftyTest(){
+        NumeralConverter numeralConverter = new NumeralConverter();
+        Assertions.assertEquals(numeralConverter.convertToInteger("L"),50);
+    }
 }
