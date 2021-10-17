@@ -4,28 +4,21 @@ public class NumeralConverter {
         int total = 0;
         for(int index = 0; index < romanNumeral.length();index++){
             char letter = romanNumeral.charAt(index);
-            if (letter == 'I'){
-                total+=1;
-            }
-            else if (letter == 'V'){
-                total+=5;
-            }
-            else if (letter == 'X'){
-                total+=10;
-            }
-            else if (letter == 'L'){
-                total+=50;
-            }
-            else if (letter == 'C'){
-                total+=100;
-            }
-            else if (letter == 'D'){
-                total+=500;
-            }
-            else if (letter == 'M'){
-                total+=1000;
-            }
+            total+=convertSingleCharacter(letter);
         }
         return total;
+    }
+
+    private int convertSingleCharacter(char singleRomanNumeral) {
+        return switch (singleRomanNumeral) {
+            case 'I' -> 1;
+            case 'V' -> 5;
+            case 'X' -> 10;
+            case 'L' -> 50;
+            case 'C' -> 100;
+            case 'D' -> 500;
+            case 'M' -> 1000;
+            default -> 0;
+        };
     }
 }
