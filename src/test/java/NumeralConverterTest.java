@@ -62,4 +62,9 @@ public class NumeralConverterTest {
         NumeralConverter numeralConverter = new NumeralConverter();
         Assertions.assertEquals(numeralConverter.convertToInteger("MMCMXCIX"),2999);
     }
+    @Test
+    public void convert_IIV_To0Test(){
+        NumeralConverter numeralConverter = new NumeralConverter();
+        Assertions.assertEquals(numeralConverter.convertToInteger("IIV"),0);
+    }
 }

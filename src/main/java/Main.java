@@ -10,6 +10,16 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the Roman Numeral:");
         String input = scanner.nextLine();
-        System.out.println(numeralConverter.convertToInteger(input));
+        int integer = numeralConverter.convertToInteger(input);
+        if(isZero(integer)){
+            System.out.println("Invalid Entry");
+        }
+        else{
+            System.out.println(integer);
+        }
+    }
+
+    private static boolean isZero(int integer){
+        return integer == 0;
     }
 }
