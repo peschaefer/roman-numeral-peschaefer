@@ -5,71 +5,71 @@ public class NumeralConverterTest {
     @Test
     public void convert_I_ToOneTest(){
         NumeralConverter numeralConverter = new NumeralConverter();
-        Assertions.assertEquals(numeralConverter.convertToInteger("I"),1);
+        Assertions.assertEquals(1,numeralConverter.convertToInteger("I"));
     }
     @Test
     public void convert_II_ToTwoTest(){
         NumeralConverter numeralConverter = new NumeralConverter();
-        Assertions.assertEquals(numeralConverter.convertToInteger("II"),2);
+        Assertions.assertEquals(2,numeralConverter.convertToInteger("II"));
     }
     @Test
     public void convert_V_ToFiveTest(){
         NumeralConverter numeralConverter = new NumeralConverter();
-        Assertions.assertEquals(numeralConverter.convertToInteger("V"),5);
+        Assertions.assertEquals(5,numeralConverter.convertToInteger("V"));
     }
     @Test
     public void convert_X_ToTenTest(){
         NumeralConverter numeralConverter = new NumeralConverter();
-        Assertions.assertEquals(numeralConverter.convertToInteger("X"),10);
+        Assertions.assertEquals(10,numeralConverter.convertToInteger("X"));
     }
     @Test
     public void convert_L_ToFiftyTest(){
         NumeralConverter numeralConverter = new NumeralConverter();
-        Assertions.assertEquals(numeralConverter.convertToInteger("L"),50);
+        Assertions.assertEquals(50,numeralConverter.convertToInteger("L"));
     }
     @Test
     public void convert_C_To100Test(){
         NumeralConverter numeralConverter = new NumeralConverter();
-        Assertions.assertEquals(numeralConverter.convertToInteger("C"),100);
+        Assertions.assertEquals(100,numeralConverter.convertToInteger("C"));
     }
     @Test
     public void convert_D_To500Test(){
         NumeralConverter numeralConverter = new NumeralConverter();
-        Assertions.assertEquals(numeralConverter.convertToInteger("D"),500);
+        Assertions.assertEquals(500,numeralConverter.convertToInteger("D"));
     }
     @Test
     public void convert_M_To1000Test(){
         NumeralConverter numeralConverter = new NumeralConverter();
-        Assertions.assertEquals(numeralConverter.convertToInteger("M"),1000);
+        Assertions.assertEquals(1000,numeralConverter.convertToInteger("M"));
     }
     @Test
     public void convert_MDCLXVI_To1666Test(){
         NumeralConverter numeralConverter = new NumeralConverter();
-        Assertions.assertEquals(numeralConverter.convertToInteger("MDCLXVI"),1666);
+        Assertions.assertEquals(1666,numeralConverter.convertToInteger("MDCLXVI"));
     }
     @Test
     public void convert_IV_To4Test(){
         NumeralConverter numeralConverter = new NumeralConverter();
-        Assertions.assertEquals(numeralConverter.convertToInteger("IV"),4);
+        Assertions.assertEquals(4,numeralConverter.convertToInteger("IV"));
     }
     @Test
     public void convert_XIV_To14Test(){
         NumeralConverter numeralConverter = new NumeralConverter();
-        Assertions.assertEquals(numeralConverter.convertToInteger("XIV"),14);
+        Assertions.assertEquals(14,numeralConverter.convertToInteger("XIV"));
     }
     @Test
     public void convert_MMCMXCIX_To2999Test(){
         NumeralConverter numeralConverter = new NumeralConverter();
-        Assertions.assertEquals(numeralConverter.convertToInteger("MMCMXCIX"),2999);
+        Assertions.assertEquals(2999,numeralConverter.convertToInteger("MMCMXCIX"));
     }
     @Test
     public void convert_IIV_To0Test(){
         NumeralConverter numeralConverter = new NumeralConverter();
-        Assertions.assertEquals(numeralConverter.convertToInteger("IIV"),0);
+        Assertions.assertEquals(0,numeralConverter.convertToInteger("IIV"));
     }
     @Test
     public void convert_MMMM_To0Test(){
         NumeralConverter numeralConverter = new NumeralConverter();
-        Assertions.assertEquals(numeralConverter.convertToInteger("MMMM"),0);
+        Assertions.assertEquals(0,numeralConverter.convertToInteger("MMMM"));
     }
 }
