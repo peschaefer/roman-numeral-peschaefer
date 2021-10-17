@@ -31,5 +31,9 @@ public class NumeralConverterTest {
     public void convert_C_To100Test(){
         NumeralConverter numeralConverter = new NumeralConverter();
         Assertions.assertEquals(numeralConverter.convertToInteger("C"),100);
+    }@Test
+    public void convert_D_To500Test(){
+        NumeralConverter numeralConverter = new NumeralConverter();
+        Assertions.assertEquals(numeralConverter.convertToInteger("D"),500);
     }
 }
