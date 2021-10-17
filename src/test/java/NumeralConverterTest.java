@@ -17,4 +17,9 @@ public class NumeralConverterTest {
         NumeralConverter numeralConverter = new NumeralConverter();
         Assertions.assertEquals(numeralConverter.convertToInteger("V"),5);
     }
+    @Test
+    public void convert_X_ToTenTest(){
+        NumeralConverter numeralConverter = new NumeralConverter();
+        Assertions.assertEquals(numeralConverter.convertToInteger("X"),10);
+    }
 }

@@ -10,6 +10,9 @@ public class NumeralConverter {
             else if (letter == 'V'){
                 total+=5;
             }
+            else if (letter == 'X'){
+                total+=10;
+            }
         }
         return total;
     }
