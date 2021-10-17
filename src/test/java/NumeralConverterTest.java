@@ -42,4 +42,9 @@ public class NumeralConverterTest {
         NumeralConverter numeralConverter = new NumeralConverter();
         Assertions.assertEquals(numeralConverter.convertToInteger("M"),1000);
     }
+    @Test
+    public void convert_MDCLXVI_To1666Test(){
+        NumeralConverter numeralConverter = new NumeralConverter();
+        Assertions.assertEquals(numeralConverter.convertToInteger("MDCLXVI"),1666);
+    }
 }
