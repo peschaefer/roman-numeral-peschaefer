@@ -2,16 +2,18 @@ public class NumeralConverter {
 
     public int convertToInteger(String romanNumeral) {
         int total = 0;
-        int currentNumeral,previousNumeral;
+        int currentNumeral,previousNumeral,nextNumeral;
         for(int index = romanNumeral.length()-1; index >= 0;index--){
             currentNumeral = convertSingleCharacter(romanNumeral.charAt(index));
             if (index == romanNumeral.length()-1){
                 total+=currentNumeral;
-            }else{
+            }
+            else{
                 previousNumeral = convertSingleCharacter(romanNumeral.charAt(index + 1));
                 if (previousNumeral > currentNumeral){
                     total -= currentNumeral;
-                } else{
+                }
+                else{
                     total += currentNumeral;
                 }
             }
