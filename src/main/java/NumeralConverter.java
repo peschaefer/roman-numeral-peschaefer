@@ -16,6 +16,9 @@ public class NumeralConverter {
             else if (letter == 'L'){
                 total+=50;
             }
+            else if (letter == 'C'){
+                total+=100;
+            }
         }
         return total;
     }
