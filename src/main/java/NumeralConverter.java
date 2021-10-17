@@ -7,6 +7,9 @@ public class NumeralConverter {
             if (letter == 'I'){
                 total+=1;
             }
+            else if (letter == 'V'){
+                total+=5;
+            }
         }
         return total;
     }

@@ -12,4 +12,9 @@ public class NumeralConverterTest {
         NumeralConverter numeralConverter = new NumeralConverter();
         Assertions.assertEquals(numeralConverter.convertToInteger("II"),2);
     }
+    @Test
+    public void convert_V_ToFiveTest(){
+        NumeralConverter numeralConverter = new NumeralConverter();
+        Assertions.assertEquals(numeralConverter.convertToInteger("V"),5);
+    }
 }
