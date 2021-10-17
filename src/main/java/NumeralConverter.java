@@ -2,9 +2,19 @@ public class NumeralConverter {
 
     public int convertToInteger(String romanNumeral) {
         int total = 0;
-        for(int index = 0; index < romanNumeral.length();index++){
-            char letter = romanNumeral.charAt(index);
-            total+=convertSingleCharacter(letter);
+        int currentNumeral,previousNumeral;
+        for(int index = romanNumeral.length()-1; index >= 0;index--){
+            currentNumeral = convertSingleCharacter(romanNumeral.charAt(index));
+            if (index == romanNumeral.length()-1){
+                total+=currentNumeral;
+            }else{
+                previousNumeral = convertSingleCharacter(romanNumeral.charAt(index + 1));
+                if (previousNumeral > currentNumeral){
+                    total -= currentNumeral;
+                } else{
+                    total += currentNumeral;
+                }
+            }
         }
         return total;
     }

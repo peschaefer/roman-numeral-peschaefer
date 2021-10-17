@@ -47,4 +47,9 @@ public class NumeralConverterTest {
         NumeralConverter numeralConverter = new NumeralConverter();
         Assertions.assertEquals(numeralConverter.convertToInteger("MDCLXVI"),1666);
     }
+    @Test
+    public void convert_IV_To4Test(){
+        NumeralConverter numeralConverter = new NumeralConverter();
+        Assertions.assertEquals(numeralConverter.convertToInteger("IV"),4);
+    }
 }
