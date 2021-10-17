@@ -67,4 +67,9 @@ public class NumeralConverterTest {
         NumeralConverter numeralConverter = new NumeralConverter();
         Assertions.assertEquals(numeralConverter.convertToInteger("IIV"),0);
     }
+    @Test
+    public void convert_MMMM_To0Test(){
+        NumeralConverter numeralConverter = new NumeralConverter();
+        Assertions.assertEquals(numeralConverter.convertToInteger("MMMM"),0);
+    }
 }

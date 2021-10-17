@@ -9,17 +9,14 @@ public class Main {
         NumeralConverter numeralConverter = new NumeralConverter();
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the Roman Numeral:");
-        String input = scanner.nextLine();
-        int integer = numeralConverter.convertToInteger(input);
-        if(isZero(integer)){
-            System.out.println("Invalid Entry");
-        }
-        else{
-            System.out.println(integer);
-        }
+        int integer = numeralConverter.convertToInteger(scanner.nextLine());
+        System.out.println(checkValidity(integer));
     }
 
-    private static boolean isZero(int integer){
-        return integer == 0;
+    private static String checkValidity(int integer){
+        if(integer == 0){
+            return "Invalid Entry";
+        }
+        return String.valueOf(integer);
     }
 }

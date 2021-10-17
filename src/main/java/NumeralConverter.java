@@ -1,7 +1,7 @@
 public class NumeralConverter {
 
     public int convertToInteger(String romanNumeral) {
-        if(!checkValidity(romanNumeral)){
+        if(!checkForRepeatedCharacters(romanNumeral)){
             return 0;
         }
         int total = 0;
@@ -46,7 +46,7 @@ public class NumeralConverter {
         };
     }
 
-    private boolean checkValidity(String romanNumeral){
+    private boolean checkForRepeatedCharacters(String romanNumeral){
         if(romanNumeral.contains("IIII")){
             return false;
         }
