@@ -9,6 +9,9 @@ public class NumeralConverter {
         boolean subtracted = false;
         for(int index = romanNumeral.length()-1; index >= 0;index--){
             currentNumeral = convertSingleCharacter(romanNumeral.charAt(index));
+            if(currentNumeral == 0){
+                return 0;
+            }
             if (index == romanNumeral.length()-1){
                 total+=currentNumeral;
             }

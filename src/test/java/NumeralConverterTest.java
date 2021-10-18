@@ -76,4 +76,8 @@ public class NumeralConverterTest {
     public void convert_ID_To0Test(){
         Assertions.assertEquals(0,numeralConverter.convertToInteger("XD"));
     }
+    @Test
+    public void convert_MXIP_To0Test(){
+        Assertions.assertEquals(0,numeralConverter.convertToInteger("MXIP"));
+    }
 }
