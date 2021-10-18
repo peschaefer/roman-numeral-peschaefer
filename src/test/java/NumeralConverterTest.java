@@ -60,4 +60,20 @@ public class NumeralConverterTest {
     public void convert_MMMM_To0Test(){
         Assertions.assertEquals(0,numeralConverter.convertToInteger("MMMM"));
     }
+    @Test
+    public void convert_IVX_To0Test(){
+        Assertions.assertEquals(0,numeralConverter.convertToInteger("IVX"));
+    }
+    @Test
+    public void convert_IM_To0Test(){
+        Assertions.assertEquals(0,numeralConverter.convertToInteger("IM"));
+    }
+    @Test
+    public void convert_VX_To0Test(){
+        Assertions.assertEquals(0,numeralConverter.convertToInteger("VX"));
+    }
+    @Test
+    public void convert_ID_To0Test(){
+        Assertions.assertEquals(0,numeralConverter.convertToInteger("XD"));
+    }
 }

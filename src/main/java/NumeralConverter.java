@@ -15,6 +15,15 @@ public class NumeralConverter {
             else{
                 previousNumeral = convertSingleCharacter(romanNumeral.charAt(index + 1));
                 if (previousNumeral > currentNumeral){
+                    if(checkSubtractionError(previousNumeral,currentNumeral)){
+                        return 0;
+                    }
+                    if(subtracted){
+                        return 0;
+                    }
+                    if(currentNumeral == 5 || currentNumeral == 50 || currentNumeral == 500){
+                        return 0;
+                    }
                     total -= currentNumeral;
                     subtracted = true;
                 }
@@ -66,5 +75,20 @@ public class NumeralConverter {
             return true;
         }
         return romanNumeral.contains("MMMM");
+    }
+
+    private boolean checkSubtractionError(int previous, int current) {
+        if (current == 1) {
+            return previous != 5 && previous != 10;
+        }
+        else if (current == 10) {
+            return previous != 50 && previous != 100;
+        }
+        else if (current == 100) {
+            return previous != 500 && previous != 1000;
+        }
+        else {
+            return true;
+        }
     }
 }
