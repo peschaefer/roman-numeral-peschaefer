@@ -18,10 +18,8 @@ public class NumeralConverter {
                     if(checkSubtractionError(previousNumeral,currentNumeral)){
                         return 0;
                     }
+                    //prevents multiple subtractions back to back
                     if(subtracted){
-                        return 0;
-                    }
-                    if(currentNumeral == 5 || currentNumeral == 50 || currentNumeral == 500){
                         return 0;
                     }
                     total -= currentNumeral;
@@ -78,6 +76,8 @@ public class NumeralConverter {
     }
 
     private boolean checkSubtractionError(int previous, int current) {
+        //This method makes sure only I,X, and C are able to be subtracted from certain other values
+        //i.e. I cannot be subtracted from anything other than V and X
         if (current == 1) {
             return previous != 5 && previous != 10;
         }
